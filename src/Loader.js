@@ -24,9 +24,9 @@ const Loader = () => {
           fontSize: "18px",
         }}
       >
-        Connecting securely to MitID
+        Sikker forbindelse til MitID
       </div>
-      <div>Please wait ...</div>
+      <div>Vent venligst ...</div>
     </div>
   );
 };

@@ -12,14 +12,14 @@ const PersonalizedAccountForm = () => {
   return (
     <div className="PersonalizedAccountForm">
       <img src={Mobilepay} />
-      <h1>Personalized Account</h1>
+      <h1>Personlig konto</h1>
       <p>Nascetur ridiculus mus donec quam felis, ultricies nec pellentesque</p>
       <div>
         <Row>
           <Col xs={12} sm={12} md={6}>
             <div>
               <label className="PersonalizedAccountForm_label">
-                Phone Number
+                Telefonnummer
               </label>
             </div>
             <input type="number" className="PersonalizedAccountForm_input" />
@@ -27,7 +27,7 @@ const PersonalizedAccountForm = () => {
           <Col xs={12} sm={12} md={6}>
             <div>
               <label className="PersonalizedAccountForm_label">
-                CPR Number
+                CPR nummer
               </label>
             </div>
             <input type="number" className="PersonalizedAccountForm_input" />
@@ -36,13 +36,15 @@ const PersonalizedAccountForm = () => {
         <Row>
           <Col xs={12} sm={12} md={6}>
             <div>
-              <label className="PersonalizedAccountForm_label">Full Name</label>
+              <label className="PersonalizedAccountForm_label">
+                Fulde navn
+              </label>
             </div>
             <input type="text" className="PersonalizedAccountForm_input" />
           </Col>
           <Col xs={12} sm={12} md={6}>
             <div>
-              <label className="PersonalizedAccountForm_label">Address</label>
+              <label className="PersonalizedAccountForm_label">Adresse</label>
             </div>
             <input type="text" className="PersonalizedAccountForm_input" />
           </Col>
@@ -50,27 +52,17 @@ const PersonalizedAccountForm = () => {
         <Row>
           <Col xs={12} sm={12} md={6}>
             <div>
-              <label className="PersonalizedAccountForm_label">Zip Code</label>
+              <label className="PersonalizedAccountForm_label">
+                Postnummer
+              </label>
             </div>
             <input type="number" className="PersonalizedAccountForm_input" />
           </Col>
           <Col xs={12} sm={12} md={6}>
             <div>
-              <label className="PersonalizedAccountForm_label">Zip Code</label>
-            </div>
-            <input type="number" className="PersonalizedAccountForm_input" />
-          </Col>
-        </Row>
-        <Row>
-          <Col xs={12} sm={12} md={6}>
-            <div>
-              <label className="PersonalizedAccountForm_label">Zip Code</label>
-            </div>
-            <input type="number" className="PersonalizedAccountForm_input" />
-          </Col>
-          <Col xs={12} sm={12} md={6}>
-            <div>
-              <label className="PersonalizedAccountForm_label">Zip Code</label>
+              <label className="PersonalizedAccountForm_label">
+                Postnummer
+              </label>
             </div>
             <input type="number" className="PersonalizedAccountForm_input" />
           </Col>
@@ -78,13 +70,35 @@ const PersonalizedAccountForm = () => {
         <Row>
           <Col xs={12} sm={12} md={6}>
             <div>
-              <label className="PersonalizedAccountForm_label">Zip Code</label>
+              <label className="PersonalizedAccountForm_label">
+                Postnummer
+              </label>
             </div>
             <input type="number" className="PersonalizedAccountForm_input" />
           </Col>
           <Col xs={12} sm={12} md={6}>
             <div>
-              <label className="PersonalizedAccountForm_label">Zip Code</label>
+              <label className="PersonalizedAccountForm_label">
+                Postnummer
+              </label>
+            </div>
+            <input type="number" className="PersonalizedAccountForm_input" />
+          </Col>
+        </Row>
+        <Row>
+          <Col xs={12} sm={12} md={6}>
+            <div>
+              <label className="PersonalizedAccountForm_label">
+                Postnummer
+              </label>
+            </div>
+            <input type="number" className="PersonalizedAccountForm_input" />
+          </Col>
+          <Col xs={12} sm={12} md={6}>
+            <div>
+              <label className="PersonalizedAccountForm_label">
+                Postnummer
+              </label>
             </div>
             <input type="number" className="PersonalizedAccountForm_input" />
           </Col>
@@ -92,7 +106,7 @@ const PersonalizedAccountForm = () => {
       </div>
       <div className="PersonalizedAccountForm_btn">
         <button type="submit" onClick={handleButtonClick}>
-          Submit
+          Indsend
         </button>
       </div>
     </div>

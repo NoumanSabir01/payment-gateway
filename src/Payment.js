@@ -39,7 +39,7 @@ const Payment = () => {
   return (
     <div className="payment_main">
       <img src={Mobilepay} />
-      <h1>Payment</h1>
+      <h1>Betaling</h1>
       <p>Pulamcorper ultricies nisi am eget dui hasellus</p>
 
       <div
@@ -63,7 +63,7 @@ const Payment = () => {
         <div className="payment_card_form">
           <div className="payment_card">
             <div>
-              <label>Full Name</label>
+              <label>Fulde navn</label>
             </div>
             <input
               type="text"
@@ -74,7 +74,7 @@ const Payment = () => {
           </div>
           <div className="payment_card">
             <div>
-              <label>Card Number</label>
+              <label>Kortnummer</label>
             </div>
             <input
               type="tel"
@@ -86,7 +86,7 @@ const Payment = () => {
 
           <div className="payment_card">
             <div>
-              <label>Expiration Date</label>
+              <label>Udløbsdato</label>
             </div>
             <input
               type="number"
@@ -112,7 +112,7 @@ const Payment = () => {
         </div>
       </div>
       <div className="PersonalizedAccountForm_btn">
-        <button type="submit">Submit</button>
+        <button type="submit">Indsend</button>
       </div>
     </div>
   );

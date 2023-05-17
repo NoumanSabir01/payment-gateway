@@ -1,0 +1,45 @@
+.PersonalizedAccountForm {
+  padding: 20px;
+}
+.PersonalizedAccountForm img {
+  width: 100px;
+  height: 50px;
+  margin-bottom: 10px;
+}
+.PersonalizedAccountForm h1 {
+  margin-bottom: 1px;
+}
+.PersonalizedAccountForm p {
+  line-height: 20px;
+}
+.PersonalizedAccountForm_label {
+  font-weight: 600;
+}
+.PersonalizedAccountForm_input,
+.PersonalizedAccountForm_label {
+  margin-top: 10px;
+}
+
+.PersonalizedAccountForm_input {
+  width: 100%;
+  border-bottom: 1px solid #ccc;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+}
+.PersonalizedAccountForm_btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+.PersonalizedAccountForm_btn button {
+  width: 120px;
+  border-radius: 100px;
+  background-color: #5e79fb;
+  font-weight: 600;
+  color: #fff;
+  border: none;
+  outline: none;
+  height: 35px;
+}

@@ -1,8 +1,6 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: "Open Sans", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -17,7 +15,10 @@ a {
 }
 label {
   font-weight: 600;
+  font-size: 14px;
 }
-
+h1 {
+  font-weight: 600;
+}
 @import "bootstrap/dist/css/bootstrap.min.css";
 @import "react-credit-cards/es/styles-compiled.css";

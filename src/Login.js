@@ -1,13 +1,15 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Form from "react-bootstrap/Form";
 import { AiOutlineInfoCircle } from "react-icons/ai";
 import { FaArrowRight } from "react-icons/fa";
 import { Link, useNavigate } from "react-router-dom";
+import Loader from "./Loader";
 import "./Login.css";
 import MitLogo from "./images/mit.png";
 
 const Login = () => {
   const [inputValue, setInputValue] = useState("");
+  const [loading, setLoading] = useState(true);
   const navigate = useNavigate();
   const handleInputChange = (event) => {
     setInputValue(event.target.value);
@@ -17,6 +19,15 @@ const Login = () => {
       navigate("/PersonalizedAccountForm");
     }
   };
+
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 2000);
+  }, []);
+
+  if (loading) return <Loader />;
+
   return (
     <div className="loginContainer">
       <h1>Login</h1>
@@ -31,12 +42,7 @@ const Login = () => {
         <div className="divider"></div>
         <div className="userid_form">
           <label>User ID</label>
-          <input
-            type="text"
-            value={inputValue}
-            onChange={handleInputChange}
-            placeholder="Type something..."
-          />
+          <input type="text" value={inputValue} onChange={handleInputChange} />
         </div>
         <div className="btn_cont">
           <button

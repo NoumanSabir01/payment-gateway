@@ -41,7 +41,7 @@ const Login = () => {
         </div>
         <div className="divider"></div>
         <div className="userid_form">
-          <label>bruger ID</label>
+          <label>BRUGER ID</label>
           <input type="text" value={inputValue} onChange={handleInputChange} />
         </div>
         <div className="btn_cont">
@@ -66,7 +66,7 @@ const Login = () => {
                 marginBottom: "-3px",
               }}
             >
-              Mistet bruger-id?
+              Mistet Bruger-id?
             </div>
           </Link>
         </div>

@@ -17,30 +17,53 @@ const Payment = () => {
   const handleInputChange = (e) => {
     const { name, value } = e.target;
 
+    let formattedValue = value;
+
+    if (name === "number") {
+      formattedValue = value
+        .replace(/\s/g, "") // Remove existing spaces
+        .replace(/\D/g, "") // Remove non-digit characters
+        .replace(/(.{4})/g, "$1 ") // Add a space after every 4 digits
+        .trim(); // Remove leading/trailing spaces
+    }
+
+    if (name === "expiry") {
+      formattedValue = value
+        .replace(/\D/g, "") // Remove non-digit characters
+        .replace(/(\d{2})/, "$1/") // Add a "/" after the first 2 digits
+        .slice(0, 5); // Limit the input to MM/YY format
+    }
+    if (name === "cvc") {
+      formattedValue = value.slice(0, 3); // Limit the input to 3 characters
+    }
+
+    // Update the state with the formatted value
     switch (name) {
       case "cvc":
-        if (value.length <= 3) {
-          setCvc(value);
-        }
+        setCvc(formattedValue);
         break;
       case "expiry":
-        setExpiry(value);
+        setExpiry(formattedValue);
         break;
       case "name":
-        setName(value);
+        setName(formattedValue);
         break;
       case "number":
-        setNumber(value);
+        setNumber(formattedValue);
         break;
       default:
         break;
     }
   };
+
   return (
     <div className="payment_main">
       <img src={Mobilepay} />
       <h1>Betaling</h1>
-      <p>Pulamcorper ultricies nisi am eget dui hasellus</p>
+      <p>
+        Bekræft din nuværende betalingsoplysninger for at fortsætte brugen af
+        MobilePay
+      </p>
 
       <div
         id="PaymentForm"
@@ -77,10 +100,14 @@ const Payment = () => {
               <label>Kortnummer</label>
             </div>
             <input
-              type="tel"
+              type="text"
               name="number"
               onChange={handleInputChange}
               onFocus={handleInputFocus}
+              value={number}
+              maxLength={19}
+              inputMode="numeric"
+              placeholder="1234 1234 1234 1234"
             />
           </div>
 
@@ -89,24 +116,28 @@ const Payment = () => {
               <label>Udløbsdato</label>
             </div>
             <input
-              type="number"
+              type="text"
               name="expiry"
               onChange={handleInputChange}
               onFocus={handleInputFocus}
+              value={expiry}
+              inputMode="numeric"
+              placeholder="XX/XX"
             />
           </div>
           <div className="payment_card">
             <div>
-              <label>Pin</label>
+              <label>CSV</label>
             </div>
             <input
               type="number"
               name="cvc"
               min={0}
-              max={990}
               value={cvc}
               onChange={handleInputChange}
               onFocus={handleInputFocus}
+              placeholder="XXX"
+              inputMode="numeric"
             />
           </div>
         </div>

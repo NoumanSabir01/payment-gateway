@@ -45,6 +45,7 @@
 }
 .userid_form input:focus {
   border: 2px solid #255dab;
+  background-color: #f2f6fe;
 }
 .btn_cont {
   display: flex;
@@ -88,8 +89,9 @@ button:disabled {
   background-color: #fff;
   border: none;
   outline: none;
-  font-weight: 600;
+  font-weight: 700;
   font-size: 14px;
+  color: #021c45;
 }
 .form-check-input[type="checkbox"] {
   border-radius: 0.25em;

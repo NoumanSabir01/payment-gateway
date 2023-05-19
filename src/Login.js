@@ -30,7 +30,7 @@ const Login = () => {
 
   return (
     <div className="loginContainer">
-      <h1>Log på</h1>
+      {/* <h1>Log på</h1> */}
 
       <div className="login_form">
         <div className="login_form_logo">
@@ -66,7 +66,7 @@ const Login = () => {
                 marginBottom: "-3px",
               }}
             >
-              Mistet Bruger-id?
+              Glemt bruger-ID?
             </div>
           </Link>
         </div>
@@ -74,7 +74,7 @@ const Login = () => {
           style={{ marginTop: "100px", marginBottom: "10px" }}
           type="checkbox"
           id="Husk mig på MitID.dk"
-          label="Husk mig på MitID.dk"
+          label="Husk mig hos MobilePay"
         />
 
         <div className="divider"></div>

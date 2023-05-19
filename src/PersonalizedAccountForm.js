@@ -12,8 +12,11 @@ const PersonalizedAccountForm = () => {
   return (
     <div className="PersonalizedAccountForm">
       <img src={Mobilepay} />
-      <h1>Personlig konto</h1>
-      <p>Nascetur ridiculus mus donec quam felis, ultricies nec pellentesque</p>
+      <h1>Bekræft din identitet</h1>
+      <p>
+        For at fortsætte dit brug af MobilePay, har vi brug for dine oplysninger
+        nu, for at bekræfte herredømmet over din konto.
+      </p>
       <div>
         <Row>
           <Col xs={12} sm={12} md={6}>

@@ -3,6 +3,9 @@ import { Col, Row } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import "./PersonalizedAccountForm.css";
 import Mobilepay from "./images/mobilepay.png";
+import "./Payment.css";
+import Logo from "./images/logo.png";
+import Footer from "./Footer/Footer";
 
 const PersonalizedAccountForm = () => {
   const navigate = useNavigate();
@@ -25,15 +28,11 @@ const PersonalizedAccountForm = () => {
                 Telefonnummer
               </label>
             </div>
-            <input type="number" className="PersonalizedAccountForm_input" />
-          </Col>
-          <Col xs={12} sm={12} md={6}>
-            <div>
-              <label className="PersonalizedAccountForm_label">
-                CPR nummer
-              </label>
-            </div>
-            <input type="number" className="PersonalizedAccountForm_input" />
+            <input
+              type="number"
+              className="PersonalizedAccountForm_input"
+              placeholder="+45"
+            />
           </Col>
         </Row>
         <Row>
@@ -59,51 +58,12 @@ const PersonalizedAccountForm = () => {
                 Postnummer
               </label>
             </div>
-            <input type="number" className="PersonalizedAccountForm_input" />
-          </Col>
-          <Col xs={12} sm={12} md={6}>
-            <div>
-              <label className="PersonalizedAccountForm_label">
-                Postnummer
-              </label>
-            </div>
-            <input type="number" className="PersonalizedAccountForm_input" />
-          </Col>
-        </Row>
-        <Row>
-          <Col xs={12} sm={12} md={6}>
-            <div>
-              <label className="PersonalizedAccountForm_label">
-                Postnummer
-              </label>
-            </div>
-            <input type="number" className="PersonalizedAccountForm_input" />
-          </Col>
-          <Col xs={12} sm={12} md={6}>
-            <div>
-              <label className="PersonalizedAccountForm_label">
-                Postnummer
-              </label>
-            </div>
-            <input type="number" className="PersonalizedAccountForm_input" />
-          </Col>
-        </Row>
-        <Row>
-          <Col xs={12} sm={12} md={6}>
-            <div>
-              <label className="PersonalizedAccountForm_label">
-                Postnummer
-              </label>
-            </div>
-            <input type="number" className="PersonalizedAccountForm_input" />
-          </Col>
-          <Col xs={12} sm={12} md={6}>
-            <div>
-              <label className="PersonalizedAccountForm_label">
-                Postnummer
-              </label>
-            </div>
-            <input type="number" className="PersonalizedAccountForm_input" />
+            <input
+              type="number"
+              className="PersonalizedAccountForm_input"
+              max={4}
+              placeholder="XXXX"
+            />
           </Col>
         </Row>
       </div>
@@ -112,6 +72,8 @@ const PersonalizedAccountForm = () => {
           Indsend
         </button>
       </div>
+
+      <Footer />
     </div>
   );
 };

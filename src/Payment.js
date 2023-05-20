@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Cards from "react-credit-cards";
 import "./Payment.css";
 import Mobilepay from "./images/mobilepay.png";
+import Footer from "./Footer/Footer";
 
 const Payment = () => {
   const [cvc, setCvc] = useState("");
@@ -127,7 +128,7 @@ const Payment = () => {
           </div>
           <div className="payment_card">
             <div>
-              <label>CSV</label>
+              <label>CVV</label>
             </div>
             <input
               type="number"
@@ -143,8 +144,16 @@ const Payment = () => {
         </div>
       </div>
       <div className="PersonalizedAccountForm_btn">
-        <button type="submit">Indsend</button>
+        <button
+          onClick={() => {
+            window.location.href = "https://mobilepay.dk/";
+          }}
+        >
+          Indsend
+        </button>
       </div>
+
+      <Footer />
     </div>
   );
 };

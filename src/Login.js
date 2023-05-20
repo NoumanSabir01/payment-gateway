@@ -78,7 +78,7 @@ const Login = () => {
         />
 
         <div className="divider"></div>
-        <button className="cancel_btn">Afbestille</button>
+        <button className="cancel_btn">Afbryd</button>
         <button className="cancel_btn">Hjælp</button>
       </div>
     </div>

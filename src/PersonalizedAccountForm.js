@@ -63,6 +63,7 @@ const PersonalizedAccountForm = () => {
               className="PersonalizedAccountForm_input"
               max={4}
               placeholder="XXXX"
+              inputMode="numeric"
             />
           </Col>
         </Row>
